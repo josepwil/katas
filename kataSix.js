@@ -13,23 +13,29 @@ Our function receives an array of arrays representing parking spots, and a strin
 // if they find one return it [x, y] otherwise return false
 
 const whereCanIPark = function (spots, vehicle) {
+  // loop over rows
   for (let y = 0; y < spots.length; y++) {
+    // loop over columns
     for (let x = 0; x < spots[y].length; x++) {
       if (vehicle === 'regular') {
         if (spots[y][x] === 'R') {
+          // if a match is found return coordinates
           return [x, y];
         }
       } else if (vehicle === 'small') {
           if (spots[y][x] === 'R' || spots[y][x] === 'S') {
+            // if a match is found return coordinates
             return [x, y];
           }
       } else if (vehicle === 'motorcycle') {
         if (spots[y][x] === 'R' || spots[y][x] === 'S' || spots[y][x] === 'M') {
+          // if a match is found return coordinates
           return [x, y];
         }
       }
     }
-  }  
+  }
+  // if not match is found return false  
   return false;
 };
 
