@@ -18,7 +18,6 @@ const conditionalSum = function(values, condition) {
   // sum initialized to 0 if there are no matches
   let sum = 0;
   if (condition === 'even') {
-    let evenSum = 0;
     // loops over and sums even array
     for (num of evenArray) {
       sum += num;
