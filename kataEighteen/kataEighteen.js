@@ -16,7 +16,8 @@ let guess;
 // loop runs whilst correct number hasn't been guessed 
 while (Number(guess) !== answer) {
   // prompts user for input and assigns it to guess variable
-  guess = prompt("Guess a number: ");
+  console.log("Guess a number:")
+  guess = prompt("> ");
   // checks guess entered is a number
   if (Number.isInteger(Number(guess))) {
     // checks number hasn't already been guessed
